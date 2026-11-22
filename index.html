@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jaqueline Andrade Ribeiro da Silva | Médica Veterinária</title>
+<meta name="description" content="Médica veterinária, mestre e doutoranda em Ciência Animal (UFG), docente de Anestesiologia e Imunologia Veterinária na UEG.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#1f5c4d">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#faf7f2; --surface:#ffffff; --ink:#1f2a27; --muted:#5d6b66;
+    --green:#1f5c4d; --green-soft:#e3efe9; --accent:#c8643b; --accent-soft:#f7e6dc;
+    --line:#e6e0d6; --radius:14px; --max:1120px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 Inter,system-ui,sans-serif}
+  img{max-width:100%;display:block}
+  a{color:var(--green)}
+  h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.2;margin:0 0 .5em}
+  h2{font-size:clamp(1.8rem,3.5vw,2.4rem)}
+  h3{font-size:1.25rem}
+  p{margin:0 0 1em}
+  p,.timeline li,.steps li,.pubs li > div,.card p,.talks li{text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+  .stat span,.badge,figcaption{text-align:left;hyphens:manual}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+  section{padding:80px 0;scroll-margin-top:60px}
+  .eyebrow{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:.8em}
+  .lead{font-size:1.12rem;color:var(--muted);max-width:68ch}
+
+  /* nav */
+  header{position:sticky;top:0;z-index:10;background:rgba(250,247,242,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  nav{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
+  .brand{font-family:Fraunces,serif;font-weight:600;font-size:1.1rem;text-decoration:none;color:var(--ink);white-space:nowrap;display:flex;align-items:center;gap:10px}
+  .brand img{width:28px;height:28px;flex-shrink:0}
+  .links{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-size:.92rem}
+  .links a{text-decoration:none;color:var(--muted)}
+  .links a:hover{color:var(--green)}
+  .menu-btn{display:none;background:none;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font:inherit;cursor:pointer}
+
+  /* hero */
+  .hero{padding:64px 0 72px}
+  .hero-grid{display:grid;grid-template-columns:1.25fr .9fr;gap:56px;align-items:center}
+  .hero h1{font-size:clamp(2.2rem,5vw,3.5rem);margin-bottom:.3em}
+  .hero .roles{color:var(--muted);font-size:1.08rem;margin-bottom:1.4em}
+  .quote{font-family:Fraunces,serif;font-size:1.3rem;line-height:1.45;border-left:3px solid var(--accent);padding-left:18px;margin:0 0 1.6em;color:var(--green)}
+  .btns{display:flex;flex-wrap:wrap;gap:12px}
+  .btn{display:inline-block;padding:12px 22px;border-radius:999px;text-decoration:none;font-weight:600;font-size:.95rem}
+  .btn-primary{background:var(--green);color:#fff}
+  .btn-ghost{border:1.5px solid var(--green);color:var(--green)}
+  .hero-photo{position:relative}
+  .hero-photo img{border-radius:24px;aspect-ratio:4/5;object-fit:cover;width:100%;box-shadow:0 20px 50px rgba(31,92,77,.18)}
+  .badge{position:absolute;left:-24px;bottom:28px;background:var(--surface);border-radius:12px;padding:12px 16px;box-shadow:0 10px 30px rgba(0,0,0,.12);font-size:.88rem;max-width:250px;line-height:1.4}
+  .badge strong{display:block;color:var(--accent)}
+
+  /* now */
+  .now{background:var(--green);color:#fff}
+  .now h2{color:#fff}
+  .now .eyebrow{color:#f2c3a8}
+  .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:28px}
+  .card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:var(--radius);padding:22px}
+  .card h3{color:#fff;font-size:1.08rem}
+  .card p{color:#d6e6df;font-size:.94rem;margin:0}
+
+  /* about */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+  .split.rev > :first-child{order:2}
+  .photo{border-radius:var(--radius);overflow:hidden}
+  .photo img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--radius)}
+  .photo img.wide{aspect-ratio:4/3}
+  .pos-low{object-position:center 85%;aspect-ratio:1/1 !important}
+  .pos-top{object-position:center 15%}
+  figure{margin:0}
+  figcaption{font-size:.82rem;color:var(--muted);margin-top:8px}
+  .timeline{list-style:none;padding:0;margin:32px 0 0;border-left:2px solid var(--line)}
+  .timeline li{position:relative;padding:0 0 18px 22px}
+  .timeline li::before{content:"";position:absolute;left:-7px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--accent)}
+  .timeline b{display:block;font-size:.85rem;color:var(--accent)}
+  .aside-note{background:var(--accent-soft);border-radius:var(--radius);padding:16px 20px;font-size:.95rem}
+
+  /* areas */
+  .area{display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:center;padding:40px 0;border-top:1px solid var(--line)}
+  .area:first-of-type{border-top:0}
+  .area.rev .area-text{order:2}
+  .gallery{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .gallery img{border-radius:12px;aspect-ratio:1/1;object-fit:cover;width:100%}
+  .gallery .tall{grid-row:span 2}
+  .gallery .tall img{aspect-ratio:auto;height:100%}
+  .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;padding:0;list-style:none}
+  .tags li{background:var(--green-soft);color:var(--green);border-radius:999px;padding:5px 12px;font-size:.85rem;font-weight:500}
+
+  /* research */
+  .alt{background:var(--surface)}
+  .research{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:32px}
+  .rcard{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--bg);display:flex;flex-direction:column}
+  .rcard img{aspect-ratio:16/10;object-fit:cover;width:100%}
+  .rcard .body{padding:24px}
+  .pill{display:inline-block;font-size:.75rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent);margin-bottom:10px}
+  .meta{font-size:.88rem;color:var(--muted)}
+
+  /* stats */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:32px 0}
+  .stat{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px;text-align:center}
+  .stat b{display:block;font-family:Fraunces,serif;font-size:2.2rem;color:var(--green);line-height:1.1}
+  .stat span{font-size:.88rem;color:var(--muted)}
+  .photos3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px}
+  .photos3 img{border-radius:12px;aspect-ratio:4/3;object-fit:cover;width:100%}
+
+  /* extension */
+  .reama{display:flex;gap:20px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px 22px;margin:24px 0}
+  .reama img{width:140px;flex-shrink:0}
+  .steps{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+  .steps li{display:grid;grid-template-columns:92px 1fr;gap:12px;font-size:.96rem}
+  .steps b{color:var(--green)}
+
+  /* pubs */
+  .pubs{list-style:none;padding:0;margin:24px 0 0}
+  .pubs li{display:grid;grid-template-columns:110px 1fr;gap:16px;padding:16px 0;border-top:1px solid var(--line)}
+  .pubs .y{font-weight:600;color:var(--accent);font-size:.92rem}
+  .pubs em{color:var(--muted);font-style:normal;font-size:.92rem}
+  .talks{columns:2;gap:32px;padding-left:18px;margin:12px 0 0}
+  .talks li{margin-bottom:6px;break-inside:avoid}
+
+  /* contact */
+  .contact{background:var(--green);color:#fff}
+  .contact h2,.contact a{color:#fff}
+  .contact p{color:#d6e6df}
+  .clinks{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:28px}
+  .clinks a{display:block;border:1px solid rgba(255,255,255,.3);border-radius:12px;padding:16px 18px;text-decoration:none;font-weight:600}
+  .clinks a span{display:block;font-weight:400;font-size:.85rem;color:#d6e6df;margin-top:2px;word-break:break-all}
+  .clinks a:hover{background:rgba(255,255,255,.08)}
+  footer{background:#17463b;color:#a9c4b9;font-size:.85rem;padding:22px 0;text-align:center}
+
+  @media (max-width:900px){
+    .hero-grid,.split,.area,.research{grid-template-columns:1fr;gap:32px}
+    .split.rev > :first-child,.area.rev .area-text{order:0}
+    .cards,.stats,.clinks{grid-template-columns:1fr 1fr}
+    .badge{left:12px}
+    .links{display:none;position:absolute;top:60px;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--line)}
+    .links.open{display:flex}
+    .links a{display:block;padding:14px 20px;border-top:1px solid var(--line)}
+    .menu-btn{display:block}
+    section{padding:56px 0}
+  }
+  @media (max-width:560px){
+    body{font-size:16px}
+    .wrap{padding:0 16px}
+    .cards,.stats,.clinks,.photos3{grid-template-columns:1fr}
+    .stats{grid-template-columns:1fr 1fr}
+    .pubs li{grid-template-columns:1fr;gap:4px}
+    .talks{columns:1}
+    .reama{flex-direction:column;align-items:flex-start}
+    .steps li{grid-template-columns:1fr;gap:0}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <a class="brand" href="#inicio"><img src="favicon.svg" alt="" width="28" height="28">Jaqueline A. R. da Silva</a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="menu">Menu</button>
+    <ul class="links" id="menu">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#areas">Áreas</a></li>
+      <li><a href="#pesquisa">Pesquisa</a></li>
+      <li><a href="#ensino">Ensino</a></li>
+      <li><a href="#extensao">Extensão</a></li>
+      <li><a href="#producao">Produção</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+<!-- INÍCIO -->
+<section class="hero" id="inicio">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Médica Veterinária · Anestesiologia e Imunologia</div>
+      <h1>Jaqueline Andrade Ribeiro da Silva</h1>
+      <p class="roles">Mestre e doutoranda em Ciência Animal pela Universidade Federal de Goiás (UFG). Docente de Anestesiologia Veterinária e Imunologia Veterinária na Universidade Estadual de Goiás (UEG).</p>
+      <p class="quote">“Monitorar, intervir e cuidar para que o paciente atravesse a anestesia com segurança e sem dor, despertando bem.”</p>
+      <div class="btns">
+        <a class="btn btn-primary" href="#sobre">Conheça minha trajetória</a>
+        <a class="btn btn-ghost" href="#contato">Contato</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="img/perfil.jpg" alt="Jaqueline sorrindo, de touca e pijama cirúrgico, no campus">
+      <div class="badge"><strong>Doutorado sanduíche</strong>Aprovada para estágio na Brown University (EUA)</div>
+    </div>
+  </div>
+</section>
+
+<!-- NESTE MOMENTO -->
+<section class="now">
+  <div class="wrap">
+    <div class="eyebrow">Neste momento</div>
+    <h2>Dedicação ao doutorado</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Tese de doutorado</h3>
+        <p>Revisão sistemática com metanálise acerca da influência dos protocolos anestésicos e da extensão cirúrgica sobre a resposta imunoinflamatória perioperatória em cães.</p>
+      </div>
+      <div class="card">
+        <h3>Artigo da dissertação</h3>
+        <p>Manuscrito em redação, derivado da dissertação de mestrado, sobre a eficácia analgésica da cetamina em infusão contínua em cadelas. Trata-se do principal trabalho da minha trajetória científica até o momento.</p>
+      </div>
+      <div class="card">
+        <h3>Brown University</h3>
+        <p>Aprovação para o período de doutorado sanduíche na Brown University, nos Estados Unidos.</p>
+      </div>
+      <div class="card">
+        <h3>Licença para qualificação</h3>
+        <p>Afastamento parcial das atividades na UEG para qualificação, com dedicação à tese. Os projetos institucionais serão retomados após a defesa.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre">
+  <div class="wrap split">
+    <div>
+      <div class="eyebrow">Sobre mim</div>
+      <h2>A escolha pela Anestesiologia</h2>
+      <p>O interesse pela Anestesiologia surgiu na primeira aula da disciplina, ainda durante a graduação. Chamou-me especial atenção a possibilidade de monitorar o paciente e intervir, por meio de manobras e fármacos, para preservar o adequado funcionamento do sistema nervoso autônomo ao longo de todo o procedimento, de modo que o animal desperte tranquilo, sem dor e sem sofrimento.</p>
+      <p>A sensibilidade em relação ao bem-estar animal e o compromisso com o melhor cuidado aos pacientes internados sempre orientaram minha atuação. Na rotina profissional, procuro aliar atenção e acolhimento ao paciente e ao tutor, transparência nas condutas e empenho na resolução de cada caso.</p>
+      <p>Iniciei a graduação em Medicina Veterinária na Universidade Federal do Tocantins (UFT), participei do Programa de Mobilidade Acadêmica na Universidade Federal do Paraná (UFPR), realizei o estágio curricular no Hospital Veterinário da Universidade Estadual Paulista (UNESP), câmpus de Jaboticabal, e concluí o curso na UFG, em 2012. Entre 2015 e 2019, atuei como médica veterinária anestesista e intensivista em três hospitais veterinários de Goiânia. Desde 2019, sou docente efetiva da UEG, no Câmpus Oeste, em São Luís de Montes Belos.</p>
+      <p class="aside-note">Nas horas livres, dedico-me ao ciclismo e ao convívio familiar no sítio da minha avó.</p>
+
+      <ul class="timeline">
+        <li><b>2007 – 2012</b>Graduação em Medicina Veterinária (UFT, UFPR, UNESP e UFG)</li>
+        <li><b>2013 – 2015</b>Mestrado em Ciência Animal pela UFG, com bolsa CAPES</li>
+        <li><b>2015 – 2019</b>Médica veterinária anestesista e intensivista em hospitais veterinários de Goiânia</li>
+        <li><b>2019 – hoje</b>Docente efetiva da UEG, em regime de dedicação exclusiva</li>
+        <li><b>2023 – hoje</b>Membro titular da Comissão de Ética no Uso de Animais (CEUA/UEG)</li>
+        <li><b>2025 – hoje</b>Doutorado em Ciência Animal pela UFG</li>
+        <li><b>2026</b>Participação no 7º Ciclo de Mentoria do PMI Goiás e aprovação para o doutorado sanduíche na Brown University</li>
+      </ul>
+    </div>
+    <figure class="photo">
+      <img src="img/neonato.jpg" alt="Jaqueline de pijama cirúrgico segurando um filhote recém-nascido envolto em toalha">
+      <figcaption>Cuidados com filhote recém-nascido.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ÁREAS -->
+<section id="areas" class="alt">
+  <div class="wrap">
+    <div class="eyebrow">Áreas de atuação</div>
+    <h2>Anestesiologia, Imunologia e Ética</h2>
+
+    <div class="area">
+      <div class="area-text">
+        <h3>Anestesiologia e analgesia</h3>
+        <p>Atuação em anestesia balanceada, monitoração anestésica e controle da dor em cães e gatos, bem como em animais de produção. Possuo, ainda, experiência em emergência e terapia intensiva, áreas nas quais atuei antes do ingresso na docência.</p>
+        <ul class="tags">
+          <li>Anestesia balanceada</li><li>Analgesia</li><li>Avaliação da dor</li><li>Emergência</li><li>Terapia intensiva</li>
+        </ul>
+      </div>
+      <div class="gallery">
+        <figure class="tall"><img src="img/anest-aula.jpg" alt="Aula prática de anestesia com alunos em volta de um cão monitorado"></figure>
+        <img src="img/anest-equipe.jpg" alt="Equipe de anestesia da UEG com um cão">
+        <img src="img/anest-campo.jpg" alt="Anestesia a campo em bovino com alunos">
+      </div>
+    </div>
+
+    <div class="area rev">
+      <div class="area-text">
+        <h3>Imunologia veterinária</h3>
+        <p>Área mais recente em minha trajetória, a Imunologia constitui um campo de estudo extremamente instigante, que me proporciona aprendizado contínuo. É também o elo entre a Anestesiologia e a minha pesquisa de doutorado, que investiga de que modo as condutas adotadas no período perioperatório repercutem na resposta imune do paciente.</p>
+        <ul class="tags">
+          <li>Imunologia</li><li>Imunodiagnóstico</li><li>Resposta imunoinflamatória</li>
+        </ul>
+      </div>
+      <div class="gallery">
+        <figure class="tall"><img src="img/imuno-ihq.jpg" alt="Jaqueline no laboratório de imuno-histoquímica, ao lado do microscópio"></figure>
+        <img src="img/lab.jpg" alt="Trabalho no laboratório de histologia e imuno-histoquímica">
+        <img src="img/imuno-diag.jpg" alt="Turma de aula prática de imunodiagnóstico">
+      </div>
+    </div>
+
+    <div class="area">
+      <div class="area-text">
+        <h3>Ética no uso de animais (CEUA)</h3>
+        <p>Desde 2023, integro como membro titular a Comissão de Ética no Uso de Animais (CEUA) da UEG, atividade à qual me dedico com especial satisfação. A análise de protocolos e o estudo aprofundado da regulamentação sobre o uso de animais no ensino e na pesquisa contribuem para que a produção científica avance com responsabilidade e respeito ao bem-estar animal.</p>
+        <ul class="tags">
+          <li>CEUA/UEG</li><li>CONCEA</li><li>Ética em experimentação animal</li>
+        </ul>
+      </div>
+      <figure class="photo">
+        <img class="wide" src="img/concea.jpg" alt="Jaqueline com colegas no VI Simpósio do CONCEA">
+        <figcaption>Participação no VI Simpósio do CONCEA.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- PESQUISA -->
+<section id="pesquisa">
+  <div class="wrap">
+    <div class="eyebrow">Pesquisa</div>
+    <h2>Anestesia, dor e imunidade</h2>
+    <p class="lead">Linha de pesquisa: analgesia e anestesia balanceada em Medicina Veterinária, atualmente em interface com a Imunologia.</p>
+    <div class="research">
+      <article class="rcard">
+        <img class="pos-top" src="img/doutorado.jpg" alt="Jaqueline apresentando o projeto de doutorado em sala de aula">
+        <div class="body">
+          <span class="pill">Doutorado · em andamento</span>
+          <h3>Protocolos anestésicos, cirurgia e resposta imunológica em cães</h3>
+          <p>Revisão sistemática com metanálise que reúne e sintetiza as evidências acerca dos efeitos de diferentes protocolos anestésicos e técnicas cirúrgicas sobre a resposta imunoinflamatória perioperatória de cães.</p>
+          <p class="meta">UFG · Programa de Pós-Graduação em Ciência Animal · Orientação: Profa. Dra. Veridiana Maria Brianezi Dignani de Moura</p>
+        </div>
+      </article>
+      <article class="rcard">
+        <img src="img/mestrado-dor.jpg" alt="Jaqueline avaliando a dor de uma cadela durante o experimento do mestrado">
+        <div class="body">
+          <span class="pill">Mestrado · 2015</span>
+          <h3>Eficácia analgésica da cetamina em infusão contínua em cadelas submetidas a mastectomia unilateral</h3>
+          <p>Estudo clínico sobre o controle da dor pós-operatória em cadelas. O artigo científico correspondente encontra-se em redação para publicação.</p>
+          <p class="meta">UFG · Bolsa CAPES · Orientação: Prof. Dr. Juan Carlos Duque Moreno</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ENSINO -->
+<section id="ensino" class="alt">
+  <div class="wrap">
+    <div class="eyebrow">Ensino</div>
+    <h2>Ensino e formação</h2>
+    <div class="split">
+      <div>
+        <p>No curso de graduação em Medicina Veterinária da UEG, sou responsável pelas disciplinas de <strong>Anestesiologia Veterinária</strong> e <strong>Imunologia Veterinária</strong>. Ministrei também as disciplinas de Farmacologia Básica, Farmacologia Aplicada e Bem-estar Animal.</p>
+        <p>Nos últimos semestres, tenho adotado <strong>metodologias ativas inspiradas no método de casos de Harvard</strong>, nas quais os estudantes analisam situações reais, tomam decisões e aplicam os conhecimentos adquiridos, seja no manejo do aparelho de anestesia, na monitoração do paciente ou na discussão de condutas.</p>
+        <p>Em 2026, incorporei a <strong>extensão à disciplina de Anestesiologia</strong>, por meio da curricularização da extensão, de modo que os estudantes desenvolvam sua formação em contato direto com a comunidade.</p>
+      </div>
+      <div>
+        <p>Em 2024, criei o <strong>Núcleo de Estudos em Anestesiologia e Terapias Medicamentosas</strong>. Foram realizadas duas edições até o momento, e pretendo fortalecer a iniciativa após a conclusão do doutorado.</p>
+        <p>Utilizo, ainda, ferramentas de <strong>gerenciamento de projetos do PMI</strong> (Project Management Institute) na organização da tese e das atividades acadêmicas. Em 2026, participei do 7º Ciclo de Mentoria do PMI Goiás.</p>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>20</b><span>TCCs orientados</span></div>
+      <div class="stat"><b>27</b><span>bancas de TCC</span></div>
+      <div class="stat"><b>2</b><span>monografias de especialização</span></div>
+      <div class="stat"><b>2</b><span>iniciações científicas</span></div>
+    </div>
+    <div class="photos3">
+      <figure><img src="img/aula-equip-2026.jpg" alt="Aula prática com aparelho de anestesia em 2026"><figcaption>Aula prática com o aparelho de anestesia, 2026.</figcaption></figure>
+      <figure><img src="img/aula-pratica.jpg" alt="Alunos em aula prática de anestesia com um cão"><figcaption>Aula prática de anestesiologia na UEG.</figcaption></figure>
+      <figure><img src="img/extensao-2026.jpg" alt="Grupo de alunos e professores em frente a uma clínica veterinária"><figcaption>Extensão curricularizada na disciplina de Anestesiologia, 2026.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- EXTENSÃO -->
+<section id="extensao">
+  <div class="wrap split rev">
+    <div>
+      <div class="eyebrow">Extensão</div>
+      <h2>Uso consciente de medicamentos em animais</h2>
+      <p>Desde 2021, coordeno ações de extensão voltadas à conscientização da comunidade sobre os riscos do uso de medicamentos em animais sem a orientação do médico-veterinário. Essa prática pode causar intoxicações e repercutir também na saúde humana, uma vez que muitos princípios ativos são comuns à Medicina e à Medicina Veterinária.</p>
+      <div class="reama">
+        <img src="img/reama.jpg" alt="Logotipo da REAMA">
+        <p style="margin:0">A <strong>REAMA</strong> (Riscos e Efeitos Adversos de Medicamentos em Animais) é a rede que reúne e divulga essas ações. <a href="https://www.instagram.com/reama_ueg/" target="_blank" rel="noopener">Siga @reama_ueg no Instagram</a>.</p>
+      </div>
+      <ul class="steps">
+        <li><b>2021</b>Conscientização da população sobre os riscos do uso indiscriminado de medicamentos em animais</li>
+        <li><b>2021 – 2022</b>Reedição do projeto, com nova equipe de estudantes</li>
+        <li><b>2023</b>Ações de conscientização em escolas</li>
+        <li><b>2024</b>Ação sobre vacinação e realização do II Simpósio Goiano sobre o Uso Consciente de Medicamentos em Animais</li>
+        <li><b>2026</b>Extensão curricularizada na disciplina de Anestesiologia</li>
+      </ul>
+      <p style="margin-top:1.2em">Pretendo ampliar as ações de extensão nos próximos anos.</p>
+    </div>
+    <figure class="photo">
+      <img class="pos-low" src="img/escola.jpg" alt="Grupo de alunos da UEG em evento de extensão em escola">
+      <figcaption>Ação de extensão em escola de São Luís de Montes Belos, 2024.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- PRODUÇÃO -->
+<section id="producao" class="alt">
+  <div class="wrap">
+    <div class="eyebrow">Produção científica</div>
+    <h2>Publicações e eventos</h2>
+    <div class="split">
+      <div>
+        <ul class="pubs">
+          <li><span class="y">Em preparação</span><div>Artigo da dissertação: eficácia analgésica da cetamina em infusão contínua em cadelas submetidas a mastectomia.</div></li>
+          <li><span class="y">2026</span><div>Cinco resumos apresentados no 23º CONPEEX. <em>Anais no prelo.</em></div></li>
+          <li><span class="y">2025</span><div>Ultrassonografia articular no diagnóstico de lesões meniscais e ruptura do ligamento cruzado caudal em cães: relato de caso e revisão bibliográfica. <em>Revista de las Jornadas de Jóvenes Investigadores (AUGM).</em></div></li>
+          <li><span class="y">2025</span><div>Quatro resumos publicados nos anais do 22º CONPEEX, entre os quais o relato de quatro projetos de extensão (2021–2024) e um relato de caso de anestesia inalatória associada à ventilação mecânica em bezerra.</div></li>
+          <li><span class="y">2022</span><div>Capítulo “Anestesia e analgesia na cirurgia”. <em>Cirurgia reconstrutiva em cães e gatos. MedVet.</em></div></li>
+          <li><span class="y">2015</span><div>Capítulo “Anestesia e analgesia na cirurgia reconstrutiva”. <em>Princípios e Técnicas de Cirurgias Reconstrutivas da Pele de Cães e Gatos. MedVep.</em></div></li>
+          <li><span class="y">2013 – 2014</span><div>Seis artigos publicados em periódicos, na área de cirurgia de pequenos animais.</div></li>
+        </ul>
+        <p style="margin-top:20px">A relação completa está disponível no <a href="http://lattes.cnpq.br/3540627539521154" target="_blank" rel="noopener">Currículo Lattes</a> e no <a href="https://orcid.org/0009-0000-5355-8284" target="_blank" rel="noopener">ORCID</a>.</p>
+
+        <h3 style="margin-top:36px">Palestras</h3>
+        <ul class="talks">
+          <li>Sedação e analgesia na rotina de plantão</li>
+          <li>Anestesiologia da gestante para cesariana</li>
+          <li>Técnicas de anestesia para mastectomia</li>
+          <li>Controle da dor no paciente oncológico</li>
+          <li>Fisiologia da dor aguda e avaliação em cães e gatos</li>
+          <li>Medicina veterinária intensiva</li>
+          <li>Anestésicos locais</li>
+          <li>O médico veterinário anestesiologista</li>
+        </ul>
+      </div>
+      <div class="gallery">
+        <figure class="tall"><img src="img/conpeex.jpg" alt="Jaqueline apresentando trabalho no CONPEEX"></figure>
+        <img src="img/cba.jpg" alt="Jaqueline sorrindo no congresso CBA">
+        <img src="img/anest-ufg-2013.jpg" alt="Jaqueline anestesiando um paciente na UFG em 2013">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato" class="contact">
+  <div class="wrap">
+    <div class="eyebrow" style="color:#f2c3a8">Contato</div>
+    <h2>Informações para contato</h2>
+    <p>Para convites para palestras, propostas de parceria em pesquisa e demais assuntos acadêmicos.</p>
+    <div class="clinks">
+      <a href="mailto:jaque.anest@gmail.com">E-mail<span>jaque.anest@gmail.com</span></a>
+      <a href="https://www.instagram.com/reama_ueg/" target="_blank" rel="noopener">Instagram REAMA<span>@reama_ueg</span></a>
+      <a href="https://www.linkedin.com/in/jaqueline-andrade-ribeiro-da-silva/" target="_blank" rel="noopener">LinkedIn<span>jaqueline-andrade-ribeiro-da-silva</span></a>
+      <a href="http://lattes.cnpq.br/3540627539521154" target="_blank" rel="noopener">Lattes<span>3540627539521154</span></a>
+      <a href="https://orcid.org/0009-0000-5355-8284" target="_blank" rel="noopener">ORCID<span>0009-0000-5355-8284</span></a>
+    </div>
+    <p style="margin-top:28px;font-size:.92rem">Universidade Estadual de Goiás, Câmpus Oeste · São Luís de Montes Belos, GO</p>
+  </div>
+</section>
+
+</main>
+
+<footer>© 2026 Jaqueline Andrade Ribeiro da Silva · Médica Veterinária</footer>
+
+<script>
+  const btn=document.querySelector('.menu-btn'), menu=document.getElementById('menu');
+  btn.addEventListener('click',()=>{const o=menu.classList.toggle('open');btn.setAttribute('aria-expanded',o)});
+  menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');btn.setAttribute('aria-expanded',false)}));
+</script>
+</body>
+</html>

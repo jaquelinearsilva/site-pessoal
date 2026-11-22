@@ -1,0 +1,11 @@
+{
+  "name": "Jaqueline Andrade Ribeiro da Silva",
+  "short_name": "Jaqueline A. R. Silva",
+  "icons": [
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ],
+  "theme_color": "#1f5c4d",
+  "background_color": "#faf7f2",
+  "display": "browser"
+}

@@ -1,0 +1,7 @@
+# Fotos originais e arquivos locais (não vão para o site)
+*.HEIC
+*.heic
+Fotos CBA/
+foto_lattes.jpg
+site-para-publicar.zip
+.claude/
