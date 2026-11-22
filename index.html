@@ -140,6 +140,8 @@
   .clinks .txt small{display:block;font-weight:400;font-size:.85rem;color:#d6e6df;margin-top:2px;word-break:break-all}
   .clinks a:hover{background:rgba(255,255,255,.08)}
   footer{background:#17463b;color:#a9c4b9;font-size:.85rem;padding:22px 0;text-align:center}
+  .flags{display:inline-flex;gap:8px;vertical-align:middle;margin-right:10px}
+  .flags svg{width:18px;height:12px;border-radius:2px;box-shadow:0 0 0 1px rgba(255,255,255,.15);display:block}
 
   @media (max-width:900px){
     .hero-grid,.split,.area,.research{grid-template-columns:1fr;gap:32px}
@@ -471,7 +473,13 @@
 
 </main>
 
-<footer>© 2026 Jaqueline Andrade Ribeiro da Silva · Médica Veterinária</footer>
+<footer>
+  <span class="flags" aria-hidden="true">
+    <svg viewBox="0 0 24 16"><rect width="24" height="16" fill="#1f7a3a"/><path d="M12 2 22 8 12 14 2 8Z" fill="#f2c200"/><circle cx="12" cy="8" r="3.4" fill="#1d3f8f"/></svg>
+    <svg viewBox="0 0 24 16"><path d="M0 0h24v16H0z" fill="#f2c200"/><path d="M0 0h24v2H0zM0 4h24v2H0zM0 8h24v2H0zM0 12h24v2H0zM0 16h24v0H0z" fill="#1f7a3a"/><rect width="10" height="8" fill="#1d3f8f"/><circle cx="2.4" cy="2" r=".6" fill="#fff"/><circle cx="5" cy="1.4" r=".6" fill="#fff"/><circle cx="7.6" cy="2" r=".6" fill="#fff"/><circle cx="5" cy="4.2" r=".6" fill="#fff"/><circle cx="3.2" cy="6" r=".6" fill="#fff"/></svg>
+  </span>
+  © 2026 Jaqueline Andrade Ribeiro da Silva · Médica Veterinária
+</footer>
 
 <script>
   const btn=document.querySelector('.menu-btn'), menu=document.getElementById('menu');
