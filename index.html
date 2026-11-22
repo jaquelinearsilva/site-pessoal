@@ -29,7 +29,8 @@
   h3{font-size:1.25rem}
   p{margin:0 0 1em}
   p,.timeline li,.steps li,.pubs li > div,.card p,.talks li{text-align:justify;hyphens:auto;-webkit-hyphens:auto}
-  .stat span,.badge,figcaption{text-align:left;hyphens:manual}
+  .stat span,.badge,figcaption,.hero .roles,.hero .quote{text-align:left;hyphens:manual}
+  .clinks a,.clinks a *{text-align:left}
   .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
   section{padding:80px 0;scroll-margin-top:60px}
   .eyebrow{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:.8em}
@@ -133,8 +134,10 @@
   .contact h2,.contact a{color:#fff}
   .contact p{color:#d6e6df}
   .clinks{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:28px}
-  .clinks a{display:block;border:1px solid rgba(255,255,255,.3);border-radius:12px;padding:16px 18px;text-decoration:none;font-weight:600}
-  .clinks a span{display:block;font-weight:400;font-size:.85rem;color:#d6e6df;margin-top:2px;word-break:break-all}
+  .clinks a{display:flex;align-items:center;gap:14px;border:1px solid rgba(255,255,255,.3);border-radius:12px;padding:16px 18px;text-decoration:none;font-weight:600;color:#fff;min-width:0}
+  .clinks svg{width:28px;height:28px;flex-shrink:0;color:#fff}
+  .clinks .txt{display:block;min-width:0}
+  .clinks .txt small{display:block;font-weight:400;font-size:.85rem;color:#d6e6df;margin-top:2px;word-break:break-all}
   .clinks a:hover{background:rgba(255,255,255,.08)}
   footer{background:#17463b;color:#a9c4b9;font-size:.85rem;padding:22px 0;text-align:center}
 
@@ -439,11 +442,26 @@
     <h2>Informações para contato</h2>
     <p>Para convites para palestras, propostas de parceria em pesquisa e demais assuntos acadêmicos.</p>
     <div class="clinks">
-      <a href="mailto:jaque.anest@gmail.com">E-mail<span>jaque.anest@gmail.com</span></a>
-      <a href="https://www.instagram.com/reama_ueg/" target="_blank" rel="noopener">Instagram REAMA<span>@reama_ueg</span></a>
-      <a href="https://www.linkedin.com/in/jaqueline-andrade-ribeiro-da-silva/" target="_blank" rel="noopener">LinkedIn<span>jaqueline-andrade-ribeiro-da-silva</span></a>
-      <a href="http://lattes.cnpq.br/3540627539521154" target="_blank" rel="noopener">Lattes<span>3540627539521154</span></a>
-      <a href="https://orcid.org/0009-0000-5355-8284" target="_blank" rel="noopener">ORCID<span>0009-0000-5355-8284</span></a>
+      <a href="mailto:jaque.anest@gmail.com">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3.5 6.5 12 13l8.5-6.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        <span class="txt">E-mail<small>jaque.anest@gmail.com</small></span>
+      </a>
+      <a href="https://www.instagram.com/reama_ueg/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/></svg>
+        <span class="txt">Instagram REAMA<small>@reama_ueg</small></span>
+      </a>
+      <a href="https://www.linkedin.com/in/jaqueline-andrade-ribeiro-da-silva/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="4" fill="currentColor"/><text x="12" y="17" text-anchor="middle" font-size="11" font-weight="700" font-family="Inter,Arial,sans-serif" fill="#1f5c4d">in</text></svg>
+        <span class="txt">LinkedIn<small>jaqueline-andrade-ribeiro-da-silva</small></span>
+      </a>
+      <a href="http://lattes.cnpq.br/3540627539521154" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="4" fill="currentColor"/><text x="12" y="16.5" text-anchor="middle" font-size="9.5" font-weight="700" font-family="Inter,Arial,sans-serif" fill="#1f5c4d">Lt</text></svg>
+        <span class="txt">Lattes<small>3540627539521154</small></span>
+      </a>
+      <a href="https://orcid.org/0009-0000-5355-8284" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="currentColor"/><text x="12" y="15.5" text-anchor="middle" font-size="8.5" font-weight="700" font-family="Inter,Arial,sans-serif" fill="#1f5c4d">iD</text></svg>
+        <span class="txt">ORCID<small>0009-0000-5355-8284</small></span>
+      </a>
     </div>
     <p style="margin-top:28px;font-size:.92rem">Universidade Estadual de Goiás, Câmpus Oeste · São Luís de Montes Belos, GO</p>
   </div>
